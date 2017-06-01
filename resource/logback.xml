@@ -48,22 +48,22 @@
 
 
 	<!--
-		kr.co.saramin.logexample2 아래 패키지 로그들만  C:\LogExample\logexample2.log 파일에만  출력하는 로거
+		com.jx372.logexample2 아래 패키지 로그들만  C:\LogExample\logexample2.log 파일에만  출력하는 로거
 	-->
-	<logger name="kr.co.saramin.logexample2"  level="info" additivity="false">
+	<logger name="com.jx372.logexample2"  level="info" additivity="false">
             <appender-ref ref="fileAppender2" />
     </logger>
     
 	<!--
-		kr.co.saramin.logexample3 아래 패키지 로그들만  C:\LogExample\logexample3.log 파일과 콘솔로 출력하는 로거
-	-->
-	<logger name="kr.co.saramin.logexample3"  level="warn" additivity="false">
+		com.jx372.logexample3 아래 패키지 로그들만  C:\LogExample\logexample3.log 파일과 콘솔로 출력하는 로거
+	level에 따라서 중요도설정이 가능 info에는 전부 나오게 된다. -->
+	<logger name="com.jx372.logexample3"  level="warn" additivity="false">
             <appender-ref ref="fileAppender3" />
 			<appender-ref ref="consoleAppender" />
     </logger>    
 	
 	<!-- 루트(글로벌) 로거 -->
-	<root level="debug">
+	<root level="warn">
 		<appender-ref ref="consoleAppender" />
 	</root>
 
